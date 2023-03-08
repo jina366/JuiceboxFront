@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Main, AllPosts } from "./components";
+import { Main, AllPosts, Register } from "./components";
 
 import {
   Route,
@@ -13,6 +13,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Main />}>
       <Route index element={<AllPosts />} />
+      <Route path="register" element={<Register />} />
     </Route>
   )
 );
@@ -20,4 +21,4 @@ const router = createBrowserRouter(
 const container = document.getElementById("app");
 const root = ReactDOM.createRoot(container);
 
-root.render(<RouterProvider router={router}/>);
+root.render(<RouterProvider router={router} />);
